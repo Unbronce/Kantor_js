@@ -11,8 +11,7 @@ function multiplyNumeric(obj) {
   }
 }
 
-multiplyNumeric();
-console.log(menu);
+multiplyNumeric(menu);
 console.log(menu);
 
 // let menu = {
