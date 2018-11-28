@@ -3,10 +3,8 @@
 
 // truncate("Hi everyone!", 20) = "Hi everyone!"
 function truncate(str, maxlength) {
-  const string = str;
-  const length = maxlength;
-  if (string.length > maxlength) {
-    str = str.substr(0, length - 1) + "\u2026";
+  if (str.length > maxlength) {
+    str = str.substr(0, maxlength - 1) + "\u2026";
     return str;
   }
   return str;
