@@ -8,8 +8,8 @@
 // alert( extractCurrencyValue('$120') === 120 ); // true
 
 function extractCurrencyValue(str) {
-  const currencyValue = str.slice(1);
-  let value = Number(currencyValue);
+  const currentValue = str.slice(1);
+  let value = Number(currentValue);
   return value;
 }
 
