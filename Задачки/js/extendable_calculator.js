@@ -5,6 +5,7 @@
 // First, implement the method calculate(str) that takes a string like "1 + 2" in the format “NUMBER operator NUMBER” (space-delimited) and returns the result. Should understand plus + and minus -.
 
 function Calculator(str) {
+  const functions = {};
   this.calculate = function(str) {
     const arr = str.split(" ");
     const operator = arr.splice(1, 1)[0];
@@ -16,7 +17,6 @@ function Calculator(str) {
     }
     return arr.reduce(functions[operator]);
   };
-  const functions = {};
   this.addMethod = function(operator, func) {
     functions[operator] = func;
   };
@@ -31,4 +31,4 @@ powerCalc.addMethod("/", (a, b) => a / b);
 powerCalc.addMethod("**", (a, b) => a ** b);
 
 let result = powerCalc.calculate("2 ** 3");
-alert(result); // 8
+console.log(result);
