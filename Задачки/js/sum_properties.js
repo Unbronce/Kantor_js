@@ -1,9 +1,13 @@
+// function sumSalaries(obj) {
+//   let result = 0;
+//   for (let value of Object.values(obj)) {
+//     result += value;
+//   }
+//   return result;
+// }
+
 function sumSalaries(obj) {
-  let result = 0;
-  for (let value of Object.values(obj)) {
-    result += value;
-  }
-  return result;
+  return Object.values(obj).reduce((sum, salary) => sum + salary, 0);
 }
 
 let salaries = {
