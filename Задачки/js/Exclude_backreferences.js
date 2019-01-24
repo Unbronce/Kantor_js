@@ -1,16 +1,30 @@
-function makeWorker() {
-  let name = "Pete";
+function makeArmy() {
+  let shooters = [];
 
-  return function() {
-    console.log(name);
-  };
+  // while (true) {
+  //   let i = 0;
+
+  //   let shooter = function() {
+  //     // shooter function
+  //     console.log(i); // should show its number
+  //   };
+  //   shooters.push(shooter);
+  //   if (i < 10) i++;
+  //   break;
+  // }
+
+  // for (let i = 0; i < 10; i++) {
+  //   let shooter = function() {
+  //     // shooter function
+  //     console.log(i); // should show its number
+  //   };
+  //   shooters.push(shooter);
+  // }
+
+  return shooters;
 }
 
-let name = "John";
+let army = makeArmy();
 
-// create a function
-let work = makeWorker();
-
-// call it
-makeWorker();
-// work(); // what will it show? "Pete" (name where created) or "John" (name where called)?
+army[0](); // the shooter number 0 shows 10
+army[5]();
